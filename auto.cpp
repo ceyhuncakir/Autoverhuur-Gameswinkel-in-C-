@@ -15,3 +15,8 @@ void Auto::set_prijs_per_dag(double percentage) {
 double Auto::get_prijs_per_dag() {
   return this->prijs_per_dag;
 }
+
+ostream& operator<<(ostream& out, const Auto& a){
+
+  return out << "\n autotype: " << a.type << " met prijs per dag: " << a.prijs_per_dag;
+}

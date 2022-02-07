@@ -1,7 +1,8 @@
+#ifndef KLANT_H
+#define KLANT_H
+
 #include <iostream>
 #include <string>
-
-#pragma once
 
 using namespace std;
 
@@ -14,4 +15,8 @@ public:
   Klant(string naam);
   void set_korting(double percentage);
   double get_korting();
+
+  friend ostream& operator<<(std::ostream& out, const Klant& k);
 };
+
+#endif

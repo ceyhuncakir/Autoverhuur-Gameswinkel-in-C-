@@ -3,6 +3,7 @@
 #include "autohuur.h"
 using namespace std;
 
+
 AutoHuur::AutoHuur(Auto& gehuurde_auto, Klant& huurder, int dagen):
 gehuurde_auto(gehuurde_auto),
 huurder(huurder),
@@ -32,4 +33,9 @@ Klant AutoHuur::get_huurder() {
 double AutoHuur::totaalprijs() {
   int discount = this->gehuurde_auto.get_prijs_per_dag() * this->aantal_dagen / 100 * this->huurder.get_korting();
   return this->gehuurde_auto.get_prijs_per_dag() * this->aantal_dagen - discount;
+}
+
+ostream& operator<<(ostream& out, const AutoHuur& ah){
+
+  return out << "\n aantal dagen: " << ah.aantal_dagen << " en dat kost ";
 }

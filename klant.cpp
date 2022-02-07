@@ -13,3 +13,8 @@ void Klant::set_korting(double percentage) {
 double Klant::get_korting() {
   return this->korting_percentage;
 }
+
+ostream& operator<<(ostream& out, const Klant& k){
+
+  return out << "\n  op naam van: " << k.naam << "(korting: " << k.korting_percentage << ")" << "\n";
+}
