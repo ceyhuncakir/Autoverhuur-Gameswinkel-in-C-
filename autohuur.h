@@ -12,15 +12,16 @@ class AutoHuur {
     Auto gehuurde_auto;
     Klant huurder;
   public:
+    friend ostream& operator<<(std::ostream& out, const AutoHuur& ah);
+
     AutoHuur(Auto& gehuurde_auto, Klant& huurder, int dagen);
     void set_aantal_dagen(int dagen);
     void set_gehuurde_auto(Auto gehuurde_auto);
     void set_huurder(Klant huurder);
-    Auto get_gehuurde_auto();
-    Klant get_huurder();
-    double totaalprijs();
+    Auto get_gehuurde_auto() const;
+    Klant get_huurder() const;
+    double totaalprijs() const;
 
-    friend ostream& operator<<(std::ostream& out, const AutoHuur& ah);
 };
 
 #endif

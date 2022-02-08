@@ -16,5 +16,5 @@ double Klant::get_korting() {
 
 ostream& operator<<(ostream& out, const Klant& k){
 
-  return out << "\n  op naam van: " << k.naam << "(korting: " << k.korting_percentage << ")" << "\n";
+  return out << k.naam << " (korting: " << k.korting_percentage << "%)" << "\n";
 }

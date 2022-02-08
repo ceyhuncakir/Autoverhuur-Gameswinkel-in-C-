@@ -22,20 +22,20 @@ void AutoHuur::set_huurder(Klant huurder) {
   this->huurder = huurder;
 }
 
-Auto AutoHuur::get_gehuurde_auto() {
+Auto AutoHuur::get_gehuurde_auto() const {
   return this->gehuurde_auto;
 }
 
-Klant AutoHuur::get_huurder() {
+Klant AutoHuur::get_huurder() const {
   return this->huurder;
 }
 
-double AutoHuur::totaalprijs() {
-  int discount = this->gehuurde_auto.get_prijs_per_dag() * this->aantal_dagen / 100 * this->huurder.get_korting();
-  return this->gehuurde_auto.get_prijs_per_dag() * this->aantal_dagen - discount;
+double AutoHuur::totaalprijs() const {
+  int discount = this->get_gehuurde_auto().get_prijs_per_dag() * this->aantal_dagen / 100 * this->get_huurder().get_korting();
+  return this->get_gehuurde_auto().get_prijs_per_dag() * this->aantal_dagen - discount;
 }
 
-ostream& operator<<(ostream& out, const AutoHuur& ah){
+ostream& operator<<(ostream& out, const AutoHuur& ah) {
 
-  return out << "\n aantal dagen: " << ah.aantal_dagen << " en dat kost ";
+  return out << "\n  autotype: " << ah.get_gehuurde_auto() << "\n  op naam van: " << ah.get_huurder() << "  aantal dagen: " << ah.aantal_dagen << " en dat kost " << ah.totaalprijs();
 }

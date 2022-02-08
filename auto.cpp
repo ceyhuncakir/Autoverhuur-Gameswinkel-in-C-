@@ -18,5 +18,5 @@ double Auto::get_prijs_per_dag() {
 
 ostream& operator<<(ostream& out, const Auto& a){
 
-  return out << "\n autotype: " << a.type << " met prijs per dag: " << a.prijs_per_dag;
+  return out << a.type << " met prijs per dag: " << a.prijs_per_dag;
 }

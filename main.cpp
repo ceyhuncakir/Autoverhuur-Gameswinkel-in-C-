@@ -19,5 +19,8 @@ int main() {
   cout << "Tweede autohuur: " << ah2 << endl;
   cout << endl;
 
+  cout << "Gehuurd: " << ah1.get_gehuurde_auto() << endl;
+  cout << "Gehuurd: " << ah2.get_gehuurde_auto() << endl;
+
   return 0;
 }
