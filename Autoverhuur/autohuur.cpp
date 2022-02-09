@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 #include "autohuur.h"
-using namespace std;
-
 
 AutoHuur::AutoHuur(Auto& gehuurde_auto, Klant& huurder, int dagen):
 gehuurde_auto(gehuurde_auto),
@@ -35,7 +33,7 @@ double AutoHuur::totaalprijs() const {
   return this->get_gehuurde_auto().get_prijs_per_dag() * this->aantal_dagen - discount;
 }
 
-ostream& operator<<(ostream& out, const AutoHuur& ah) {
+std::ostream& operator<<(std::ostream& out, const AutoHuur& ah) {
 
   return out << "\n  autotype: " << ah.get_gehuurde_auto() << "\n  op naam van: " << ah.get_huurder() << "  aantal dagen: " << ah.aantal_dagen << " en dat kost " << ah.totaalprijs();
 }

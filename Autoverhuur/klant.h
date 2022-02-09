@@ -7,14 +7,14 @@
 class Klant {
 
 private:
-  string naam;
+  std::string naam;
   double korting_percentage;
 public:
-  Klant(string naam);
+  Klant(std::string naam);
   void set_korting(double percentage);
   double get_korting();
 
-  friend ostream& operator<<(std::ostream& out, const Klant& k);
+  friend std::ostream& operator<<(std::ostream& out, const Klant& k);
 };
 
 #endif

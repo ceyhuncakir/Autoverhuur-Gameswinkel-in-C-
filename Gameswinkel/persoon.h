@@ -1,8 +1,6 @@
 #ifndef PERSOON_H
 #define PERSOON_H
 
-using namespace std;
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -11,12 +9,12 @@ using namespace std;
 class Persoon {
 
   private:
-    string name;
+    std::string name;
     double money;
-    vector<Game> boughtgames;
+    std::vector<Game> boughtgames;
   public:
-    Persoon(string name, double money);
-    void getPerson(string name);
+    Persoon(std::string name, double money);
+    void getPerson(std::string name);
     void koop(Game game);
     void verkoop(Game game, Persoon persoon);
 };
