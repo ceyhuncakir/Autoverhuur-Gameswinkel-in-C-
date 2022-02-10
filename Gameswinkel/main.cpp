@@ -18,7 +18,29 @@ int main()
     Game g2("Need for Speed: Rivals", releaseJaar2, 45.99);
     Game g3("Need for Speed: Rivals", releaseJaar2, 45.99);
 
-    // Druk personen p1, p2 en p3 nu af naar de console
+    Persoon p1("Eric", 200);
+    Persoon p2("Hans", 55);
+    Persoon p3("Arno", 185);
+
+    p1.koop(g1);
+    p1.koop(g1);
+    p1.koop(g3);
+    p2.koop(g2);
+    p2.koop(g1);
+    p3.koop(g3);
+
+    std::cout << p1;
+    std::cout << p2;
+    std::cout << p3;
+    std::cout << std::endl;
+
+    p1.verkoop(g1, p3);
+    p2.verkoop(g2, p3);
+    p2.verkoop(g1, p1);
+
+    std::cout << p1;
+    std::cout << p2;
+    std::cout << p3;
 
     return 0;
 }

@@ -15,6 +15,12 @@ public:
   int getRelease() const;
   double getPrice() const;
   std::string getGame() const;
+
+  bool operator==(const Game &other) const {
+      return game == other.game && release == other.release && price == other.price;
+  }
+
+  friend std::ostream& operator<<(std::ostream& out, const Game& k);
 };
 
 #endif

@@ -14,9 +14,9 @@ class Persoon {
     std::vector<Game> boughtgames;
   public:
     Persoon(std::string name, double money);
-    void getPerson(std::string name);
-    void koop(Game game);
-    void verkoop(Game game, Persoon persoon);
+    bool koop(const Game &game);
+    bool verkoop(const Game &game, Persoon &persoon);
+    friend std::ostream& operator<<(std::ostream& out, const Persoon& k);
 };
 
 #endif
