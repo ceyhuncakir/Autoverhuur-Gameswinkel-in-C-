@@ -24,7 +24,6 @@ std::string Game::getGame() const {
 std::ostream& operator<<(std::ostream& out, const Game& g){
 
   time_t current_time;
-
   current_time = time(NULL);
   int current_year;
   current_year = 1970 + current_time / 31537970;

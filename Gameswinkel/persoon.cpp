@@ -10,7 +10,6 @@ money(money)
 bool Persoon::koop(const Game &game) {
 
   time_t current_time;
-
   current_time = time(NULL);
   int current_year;
   current_year = 1970 + current_time / 31537970;
@@ -33,7 +32,6 @@ bool Persoon::koop(const Game &game) {
 bool Persoon::verkoop(const Game &game, Persoon &persoon) {
 
   time_t current_time;
-
   current_time = time(NULL);
   int current_year;
   current_year = 1970 + current_time / 31537970;
@@ -56,7 +54,7 @@ bool Persoon::verkoop(const Game &game, Persoon &persoon) {
 
 std::ostream& operator<<(std::ostream& out, const Persoon& p){
 
-  out << "\n" << p.name << " heeft een budget van " << p.money << " en bezit de volgende games:" << std::endl;
+  out << p.name << " heeft een budget van " << p.money << " en bezit de volgende games:" << std::endl;
 
   for(auto elem : p.boughtgames) {
 

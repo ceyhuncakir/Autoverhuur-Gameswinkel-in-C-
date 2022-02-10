@@ -29,18 +29,18 @@ int main()
     p2.koop(g1);
     p3.koop(g3);
 
-    std::cout << p1;
-    std::cout << p2;
-    std::cout << p3;
-    std::cout << std::endl;
+    std::cout << "p1: " << p1 << std::endl;
+    std::cout << "p2: " << p2 << std::endl;
+    std::cout << "p3: " << p3 << std::endl;
 
     p1.verkoop(g1, p3);
     p2.verkoop(g2, p3);
     p2.verkoop(g1, p1);
 
-    std::cout << p1;
-    std::cout << p2;
-    std::cout << p3;
+    std::cout << std::endl;
+    std::cout << "p1: " << p1 << std::endl;
+    std::cout << "p2: " << p2 << std::endl;
+    std::cout << "p3: " << p3 << std::endl;
 
     return 0;
 }
